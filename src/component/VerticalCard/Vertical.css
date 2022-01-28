@@ -1,0 +1,65 @@
+/* Start Services */
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.services__header {
+  text-align: center;
+}
+.services__header__title {
+  font-size: 80px;
+  margin: 0px 0px -10px;
+  color: #505050;
+  letter-spacing: -4px;
+}
+.services__header__text {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.services .box-container {
+  margin-top: 80px;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.services .box-container__box {
+  text-align: center;
+  border: 1px solid #264653;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: 60px 20px auto 20px 30px;
+  grid-template-rows: 60px auto 30px;
+  row-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.services .box-container__box > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.services .box-container__box > *:nth-child(2) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.services .box-container__box > *:nth-child(3) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+.services .box-container__box__title {
+  font-weight: bolder;
+  border-bottom: 1px solid #264653;
+  margin: 0px;
+}
+.services .box-container__box__text {
+  line-height: 1.6;
+  margin: 0px;
+}
+
+/* End Services */
+/*# sourceMappingURL=Vertical.css.map */

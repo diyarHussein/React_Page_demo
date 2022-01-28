@@ -1,0 +1,14 @@
+@use "../../Scss/variables" as var;
+@use "../../Scss/mixins" as mix;
+
+.link {
+  color: var.$bg-color;
+  font-weight: bold;
+  &__span {
+    text-decoration: none;
+    border: 1px solid var.$bg-color;
+    padding: 5px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+}

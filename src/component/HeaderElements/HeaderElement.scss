@@ -1,0 +1,221 @@
+@use "../../Scss/variables" as var;
+@use "../../Scss/mixins" as mix;
+/* Start Heading */
+.header {
+  background-color: var.$bg-color;
+  color: var.$text-color-normal;
+  text-align: center;
+  position: relative;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 10px 0px;
+    position: relative;
+  }
+  &__logo {
+    width: 200px;
+    text-align: left;
+  }
+  &__landing {
+    background-color: var.$text-color-normal;
+    min-height: 100vh;
+  }
+}
+
+svg {
+  width: 30%;
+  height: 50%;
+  right: 0;
+  margin-right: 15px;
+  @include mix.align-position;
+  @include mix.screenSize(small) {
+    display: none;
+  }
+}
+
+/* Animate svg */
+#twoL {
+  animation-name: numL;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#twoR {
+  animation-name: numR;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  transform-box: fill-box;
+}
+#twoC {
+  animation-name: numC;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#zero {
+  animation-name: numZ;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#balon {
+  animation-name: balon;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+#seilL {
+  animation-name: seilL;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+#seilR {
+  animation-name: seilR;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+@keyframes numL {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: translateY(-40%);
+  }
+}
+@keyframes numR {
+  0% {
+    transform: translateX(10%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+@keyframes numC {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes numZ {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes balon {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(600px);
+  }
+  70% {
+    transform: translateY(30%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes seilL {
+  0% {
+    transform: translateX(0%);
+  }
+  10% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
+@keyframes seilR {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-150px);
+  }
+}
+/* End Animation */
+.toggle-menu {
+  position: absolute;
+  right: 2px;
+  @include mix.screenSize(medium) {
+    display: none;
+  }
+}
+.links {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: flex-end;
+  &__item {
+    text-align: center;
+    &__link {
+      text-decoration: none;
+      color: var.$text-color-normal;
+      cursor: pointer;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
+  @include mix.screenSize(small) {
+    display: none;
+  }
+}
+.info {
+  color: var.$text-color-normal;
+  background-color: var.$bg-color;
+  @include mix.align-position;
+  text-align: center;
+  width: 35%;
+  &__title {
+    font-size: 32px;
+    font-weight: lighter;
+    margin: 1 0px 0px;
+  }
+  &__text {
+    font-size: 14px;
+    margin: 0px 0px 10px;
+    line-height: 1.6;
+  }
+  @include mix.screenSize(small) {
+    width: 100%;
+  }
+}
+
+/* End Heading */

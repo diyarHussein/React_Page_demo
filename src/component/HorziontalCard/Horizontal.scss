@@ -1,0 +1,46 @@
+@use "../../Scss/variables" as var;
+@use "../../Scss/mixins" as mix;
+
+/* Start about */
+.about {
+  margin-top: var.$section-padding;
+  margin-bottom: var.$section-padding;
+  &__header {
+    @include mix.section-header;
+    &__title {
+      @include mix.section-title;
+    }
+    &__text {
+      @include mix.section-text;
+    }
+  }
+}
+.about-container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  gap: 40px;
+  &__image {
+    width: 300px;
+    img {
+      width: 100%;
+    }
+  }
+  &__box {
+    padding-bottom: 20px;
+    //max-width: 100%;
+    &__title {
+      font-weight: bolder;
+      border-bottom: 1px solid var.$bg-color;
+      margin: 0px 0px 20px;
+    }
+    &__text {
+      line-height: 1.6;
+      margin: 0px 0px 20px;
+    }
+  }
+  @include mix.screenSize(small) {
+    grid-template-columns: 300px;
+  }
+}
+/* End about */

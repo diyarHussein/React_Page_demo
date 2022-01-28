@@ -1,0 +1,45 @@
+@use "../../Scss/variables" as var;
+@use "../../Scss/mixins" as mix;
+/* Start Services */
+.services {
+  padding-top: var.$section-padding;
+  padding-bottom: var.$section-padding;
+  text-align: center;
+  &__header {
+    @include mix.section-header;
+    &__title {
+      @include mix.section-title;
+    }
+    &__text {
+      @include mix.section-text;
+    }
+  }
+}
+.services .box-container {
+  margin-top: 80px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  &__box {
+    text-align: center;
+    border: 1px solid var.$bg-color;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px auto 30px;
+    row-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &__title {
+      font-weight: bolder;
+      border-bottom: 1px solid var.$bg-color;
+      margin: 0px;
+    }
+    &__text {
+      line-height: 1.6;
+      margin: 0px;
+    }
+  }
+}
+
+/* End Services */

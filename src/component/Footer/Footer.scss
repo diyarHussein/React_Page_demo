@@ -1,0 +1,11 @@
+@use "../../Scss/variables" as var;
+@use "../../Scss/mixins" as mix;
+
+/* Start Footer */
+.footer {
+  background-color: var.$bg-color;
+  padding: 20px 0px;
+  text-align: center;
+  color: var.$text-color-normal;
+}
+/* End Footer */

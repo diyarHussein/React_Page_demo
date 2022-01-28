@@ -1,0 +1,54 @@
+/* Start about */
+.about {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.about__header {
+  text-align: center;
+}
+.about__header__title {
+  font-size: 80px;
+  margin: 0px 0px -10px;
+  color: #505050;
+  letter-spacing: -4px;
+}
+.about__header__text {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.about-container {
+  margin-top: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 40px 300px;
+  grid-template-columns: 300px 300px;
+  gap: 40px;
+}
+.about-container__image {
+  width: 300px;
+}
+.about-container__image img {
+  width: 100%;
+}
+.about-container__box {
+  padding-bottom: 20px;
+}
+.about-container__box__title {
+  font-weight: bolder;
+  border-bottom: 1px solid #264653;
+  margin: 0px 0px 20px;
+}
+.about-container__box__text {
+  line-height: 1.6;
+  margin: 0px 0px 20px;
+}
+@media (max-width: 768px) {
+  .about-container {
+    -ms-grid-columns: 300px;
+    grid-template-columns: 300px;
+  }
+}
+
+/* End about */
+/*# sourceMappingURL=Horizontal.css.map */
